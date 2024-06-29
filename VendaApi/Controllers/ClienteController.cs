@@ -22,7 +22,6 @@ namespace VendaApi.Controllers
         [HttpGet]
         public IActionResult Listar(string pesquisa, int page = 0, int pageSize = 0)
         {
-            // ternário
             var alunos = string.IsNullOrEmpty(pesquisa) ?
                 clienteService.Listar(page, pageSize) :
                 clienteService.Listar(pesquisa, page, pageSize);

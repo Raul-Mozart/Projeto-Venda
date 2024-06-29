@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Venda"
+                   namespace="Venda.Entidades">
+
+	<class name="Cadastro" table="cadastro">
+		<id name="Id" type="int">
+			<generator class="sequence" >
+				<param name="sequence">cadastro_seq</param>
+			</generator>
+		</id>
+		<property name="Data"		type="DateTime"		/>
+		<many-to-one name="Cliente"
+					 column="clientecodigo"
+					 fetch="join"
+					 lazy="false"
+				 ></many-to-one>
+		<many-to-one name="Divida"
+					 column="dividaid"
+					 fetch="join"
+					 lazy="false"
+				 ></many-to-one>
+
+	</class>
+</hibernate-mapping>

@@ -9,6 +9,13 @@ namespace Venda.Entidades
 {
     public class Cliente
     {
+        public Cliente()
+        {
+            Nome = "Inicializado";
+            CPF = "123-456-789.55";
+            DataNascimento = new DateTime(2000, 10, 10);
+            Email = "teste@teste.com";
+        }
         public int Codigo { get; set; }
 
         [Required(ErrorMessage = "Nome obrigatório, no mínimo 12 caracteres")]
@@ -16,7 +23,7 @@ namespace Venda.Entidades
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "CPF obrigatório")]
-        public int CPF { get; set; }
+        public string CPF { get; set; }
 
         [Required(ErrorMessage = "Data de nascimento obrigatório")]
         public DateTime? DataNascimento { get; set; }

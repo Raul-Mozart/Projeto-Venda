@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Mappings\Aluno.hbm.xml" />
+    <None Remove="Mappings\Curso.hbm.xml" />
+    <None Remove="Mappings\Inscricao.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="NHibernate" Version="5.5.1" />
-    <PackageReference Include="NHibernate.Linq" Version="1.0.0" />
+    <PackageReference Include="Npgsql" Version="8.0.3" />
   </ItemGroup>
 
 </Project>
